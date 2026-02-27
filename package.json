@@ -6,7 +6,10 @@
   "private": true,
   "scripts": {
     "dev": "bash start-dev.sh",
-    "build": "yarn workspace next-js build && yarn workspace lecture-notes-electron make"
+    "build-next": "yarn workspace next-js build",
+    "build-electron": "yarn workspace lecture-notes-electron make",
+    "open-build-folder": "open lecture-notes-electron/out",
+    "build": "yarn build-next && yarn build-electron && yarn open-build-folder"
   },
   "author": "Oscar Lundberg"
 }
