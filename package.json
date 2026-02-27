@@ -1,0 +1,12 @@
+{
+  "workspaces": {
+    "packages": ["lecture-notes-electron", "next-js"],
+    "nohoist": ["**"]
+  },
+  "private": true,
+  "scripts": {
+    "dev": "bash start-dev.sh",
+    "build": "yarn workspace next-js build && yarn workspace lecture-notes-electron make"
+  },
+  "author": "Oscar Lundberg"
+}
