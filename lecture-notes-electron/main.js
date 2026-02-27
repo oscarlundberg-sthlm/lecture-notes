@@ -21,6 +21,7 @@ const appServe = app.isPackaged
 const createWindow = async () => {
   mainWindow = new BrowserWindow({
     show: false,
+    icon: path.join(appPath, "images/icon_macos.png"), // Use the correct icon path
     webPreferences: {
       preload: path.join(appPath, "preload/preload.js"),
       contextIsolation: true,
