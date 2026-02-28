@@ -13,13 +13,27 @@ const MainArea = (props: Props) => {
 
   if (!base64) {
     return (
-      <div className="flex items-center justify-center h-screen">
-        <CardComponent heading="Welcome!" className="prose shadow-lg">
-          <p>Start by going to the main menu.</p>
-          <ul>
-            <li>Click "New" to start a project by selecting a PDF.</li>
-            <li>Click "Open" to open an existing project file.</li>
-          </ul>
+      <div className="flex items-center justify-center h-screen bg-gray-400">
+        <CardComponent
+          heading={
+            <div className="flex items-center gap-4 mb-3.5 mt-4.5">
+              <div className="text-3xl">✍️</div>
+              <div className="grow">
+                <div>Lecture Notes</div>
+                <div className="text-sm font-normal text-gray-600">
+                  PDF to the left, notes to the right.
+                </div>
+              </div>
+            </div>
+          }
+          className="prose shadow-lg"
+        >
+          <p className="mt-0">Start guide:</p>
+          <ol>
+            <li>Menu (up there ↖︎)</li>
+            <li>New</li>
+            <li>Select a PDF</li>
+          </ol>
         </CardComponent>
       </div>
     );

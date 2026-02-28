@@ -1,7 +1,8 @@
 import { Card, Space } from "antd";
+import { ReactNode } from "react";
 
 interface Props {
-  heading?: string;
+  heading?: ReactNode;
   className?: string;
   children?: React.ReactNode;
 }

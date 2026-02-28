@@ -17,7 +17,7 @@ export default function Home() {
     <DataContextProvider>
       <FileHandler />
       <Banner />
-      <div>
+      <div className="bg-gray-50">
         <main>
           <MainArea />
         </main>

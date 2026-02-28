@@ -20,7 +20,7 @@ export default function NotesEditor({ value, onSave, className }: Props) {
     editorProps: {
       attributes: {
         class:
-          "h-full p-2 [&_ol_li]:list-decimal [&_ul_li]:list-disc [&_ol]:my-2 [&_ol]:ps-7 [&_ul]:my-2 [&_ul]:ps-6 mx-auto rounded-lg shadow-md border border-gray-300",
+          "h-full p-2 [&_ol_li]:list-decimal [&_ul_li]:list-disc [&_ol]:my-2 [&_ol]:ps-7 [&_ul]:my-2 [&_ul]:ps-6 mx-auto rounded-lg bg-white shadow-md border border-gray-300",
       },
     },
     onFocus(e) {
