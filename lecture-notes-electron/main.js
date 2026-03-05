@@ -126,6 +126,19 @@ function createMenu() {
         { role: "quit" },
       ],
     },
+    // dev tools toggle in development mode
+    ...(app.isPackaged
+      ? []
+      : [
+          {
+            label: "View",
+            submenu: [
+              { role: "reload" },
+              { role: "forceReload" },
+              { role: "toggleDevTools" },
+            ],
+          },
+        ]),
   ];
 
   const menu = Menu.buildFromTemplate(template);
