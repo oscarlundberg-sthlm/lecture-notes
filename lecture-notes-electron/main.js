@@ -2,6 +2,7 @@ const { app, BrowserWindow, dialog, Menu, ipcMain } = require("electron/main");
 const serve = require("electron-serve").default;
 const path = require("path");
 const fs = require("fs");
+const { FILE_EXTENSION } = require("../global.constants");
 
 let mainWindow;
 let currentFilePath = null;
@@ -93,7 +94,7 @@ function createMenu() {
           accelerator: "CmdOrCtrl+O",
           click: async () => {
             const { canceled, filePaths } = await dialog.showOpenDialog({
-              filters: [{ name: "Project", extensions: ["lectnotes"] }],
+              filters: [{ name: "Project", extensions: [FILE_EXTENSION] }],
               properties: ["openFile"],
             });
 
@@ -152,7 +153,7 @@ ipcMain.handle("save-to-disk", async (_, { data, saveAs }) => {
   try {
     if (!currentFilePath || saveAs) {
       const { canceled, filePath } = await dialog.showSaveDialog({
-        filters: [{ name: "Project", extensions: ["lectnotes"] }],
+        filters: [{ name: "Project", extensions: [FILE_EXTENSION] }],
       });
 
       if (canceled || !filePath) return null;
